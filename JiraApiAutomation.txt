@@ -1,0 +1,33 @@
+Jira automation using rest assured
+1. Authentication method used is basic auth.
+authenticate jira doc
+https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#version
+
+token : ATATT3xFfGF0vr0MVyOwavIZaXfxhAzTfxRS1-mqqld72jGjp0lZUu1BLUmTxm9AB7e-D53Q21L7c0mgzaTFX-oLaC6zoJ2xLHEn8_FSnGBSpXs5jI4YTGJWhu-aB2Bh_nrxqvy6HryWiEq99x44WQsc_1HKhKRHnCdcrYnkD6g1TVRON53sBAI=063F150D
+Format : sourabhmohrir@gmail.com:ATATT3xFfGF0vr0MVyOwavIZaXfxhAzTfxRS1-mqqld72jGjp0lZUu1BLUmTxm9AB7e-D53Q21L7c0mgzaTFX-oLaC6zoJ2xLHEn8_FSnGBSpXs5jI4YTGJWhu-aB2Bh_nrxqvy6HryWiEq99x44WQsc_1HKhKRHnCdcrYnkD6g1TVRON53sBAI=063F150D
+Base64 : c291cmFiaG1vaHJpckBnbWFpbC5jb206QVRBVFQzeEZmR0YwdnIwTVZ5T3dhdklaYVhmeGhBelRmeFJTMS1tcXFsZDcyakdqcDBsWlV1MUJMVW1UeG05QUI3ZS1ENTNRMjFMN2MwbWd6YVRGWC1vTGFDNnpvSjJ4TEhFbjhfRlNuR0JTcFhzNWpJNFlUR0pXaHUtYUIyQmhfbnJ4cXZ5NkhyeVdpRXE5OXg0NFdRc2NfMUhLaEtSSG5DZGNyWW5rRDZnMVRWUk9ONTNzQkFJPTA2M0YxNTBE
+
+2. Create Issue(Bug)
+Issue create doc
+https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-post
+
+payload : {
+    "fields": {
+       "project":
+       {
+          "key": "RJ"
+       },
+       "summary": "Testing the create issue api",
+       "issuetype": {
+          "name": "Bug"
+       }
+   }
+}
+
+3. Add attachments
+Add attachment doc
+https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-attachments/#api-rest-api-3-issue-issueidorkey-attachments-post
+
+4. Delete issue
+Path param to be send i.e issueid
+
